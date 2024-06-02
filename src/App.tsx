@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import { getImages } from './images-api';
@@ -76,10 +76,6 @@ function App() {
 
     fetchImages();
   }, [page, query]);
-
-  const showModal = ():void => {
-    setIsOpen(true)
-  };
   
   const closeModal = ():void => {
     setIsOpen(false)

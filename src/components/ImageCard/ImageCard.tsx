@@ -10,7 +10,7 @@ type Image = {
 };
 
 export default function ImageCard({ image, setIsOpen, setImage }:Props) {
-    const { raw, full, regular, small, thumb } = image.urls;
+    const {  regular, small } = image.urls;
 
     return <div id={image.id} >
         <img onClick={() => { setIsOpen(true); setImage(regular)}} src={small} alt="" width={50} height={50}/>
